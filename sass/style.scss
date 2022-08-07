@@ -1,0 +1,49 @@
+/* VARIABLES */
+@import './colors';
+
+/* SITE */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'DM Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0 2rem;
+	background-color: $cream;
+}
+
+/* SECTION */
+
+.balance {
+	display: flex;
+	// flex-direction: column;
+	height: 10rem;
+	width: 100%;
+	background-color: $soft-red;
+
+	&__logo {
+		// float: right;
+	}
+}
+
+/* HOVERS */
+
+/* MEDIA QUERIES */
+
+@media (min-width: 500px) {
+}

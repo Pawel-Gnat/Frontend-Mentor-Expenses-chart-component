@@ -21,7 +21,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	min-height: 100vh;
 	margin: 0 2rem;
 	background-color: $cream;
@@ -31,14 +30,45 @@ body {
 
 .balance {
 	display: flex;
-	// flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	height: 10rem;
 	width: 100%;
+	padding: 0 2.5rem 0 2rem;
+	border-radius: 1rem;
+	color: $very-pale-orange;
 	background-color: $soft-red;
 
-	&__logo {
-		// float: right;
+	.textarea {
+		&__heading {
+			font-size: 1.4rem;
+			margin-bottom: 0.5rem;
+			opacity: 0.7;
+		}
+
+		&__total {
+			font-weight: 700;
+			font-size: 2rem;
+		}
 	}
+
+	.logo {
+		height: 4rem;
+	}
+}
+
+.data {
+	height: 42rem;
+	margin: 2rem;
+
+	.chart {
+		height: 25rem;
+		width: auto;
+	}
+}
+
+footer {
+	text-align: center;
 }
 
 /* HOVERS */

@@ -27,9 +27,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 100vh;
   margin: 0 2rem;
   background-color: #f8e9dd;
@@ -40,9 +37,47 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 10rem;
   width: 100%;
+  padding: 0 2.5rem 0 2rem;
+  border-radius: 1rem;
+  color: #fffaf5;
   background-color: #ec775f;
+}
+
+.balance .textarea__heading {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.balance .textarea__total {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.balance .logo {
+  height: 4rem;
+}
+
+.data {
+  height: 42rem;
+  margin: 2rem;
+}
+
+.data .chart {
+  height: 25rem;
+  width: auto;
+}
+
+footer {
+  text-align: center;
 }
 
 /* HOVERS */

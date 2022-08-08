@@ -11,20 +11,34 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 </head>
 
 <body>
 	<main>
 		<section>
-
 			<div class="balance">
-				<p class="balance__headingtext">My balance</p>
-				<p class="balance__total">$921.48</p>
-				<img src="./images/logo.svg" alt="App logo" class="balance__logo">
+				<div class="textarea">
+					<p class="textarea__heading">My balance</p>
+					<p class="textarea__total">$921.48</p>
+				</div>
+				<img src="./images/logo.svg" alt="App logo" class="logo">
 			</div>
 
+			<div class="data">
+				<h1 class="heading">Spending - Last 7 days</h1>
 
-
+				<!-- <canvas class="chart" id="chart"></canvas> -->
+				
+				<p class="text">Total this month</p>
+				<div class="summary">
+					<p class="summary__total">$478.33</p>
+					<div class="summary__textarea">
+						<p class="summary__textarea--growth">+2.4%</p>
+						<p class="summary__textarea--text text">from last month</p>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 

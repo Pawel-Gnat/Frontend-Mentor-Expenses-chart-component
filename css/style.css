@@ -67,19 +67,128 @@ body {
 }
 
 .data {
-  height: 42rem;
-  margin: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background-color: #fffaf5;
+}
+
+.data .heading {
+  font-size: 2.4rem;
+  color: #382314;
 }
 
 .data .chart {
-  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  border-bottom: 2px solid #f8e9dd;
+}
+
+.data .chart__col {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 25rem;
+}
+
+.data .chart__col--data {
+  position: relative;
+  min-width: 3.3rem;
+  border-radius: 0.5rem;
+  background-color: #ec775f;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.data .chart__col--data .popup {
+  visibility: hidden;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
   width: auto;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #382314;
+  color: #f8e9dd;
+}
+
+.data .chart__col--day {
+  font-size: 1rem;
+  padding-bottom: 2.5rem;
+  margin-top: 1.2rem;
+  color: #93867b;
+}
+
+.text {
+  font-size: 1.4rem;
+  margin: 3rem 0 0.5rem;
+  color: #93867b;
+}
+
+.summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.summary__total {
+  font-size: 2.9rem;
+  font-weight: 700;
+  color: #382314;
+}
+
+.summary__textarea {
+  text-align: right;
+}
+
+.summary__textarea--growth {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #382314;
+}
+
+.summary__textarea--text {
+  font-size: 1.4rem;
+  color: #93867b;
 }
 
 footer {
   text-align: center;
+  margin-top: 1rem;
 }
 
 /* HOVERS */
+.data .chart__col--data:hover {
+  opacity: 0.8;
+}
+
+.data .chart__col--data:hover .popup {
+  visibility: visible;
+}
+
 /* MEDIA QUERIES */
 /*# sourceMappingURL=style.css.map */

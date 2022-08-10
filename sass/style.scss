@@ -21,19 +21,20 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	min-height: 100vh;
 	margin: 0 2rem;
 	background-color: $cream;
 }
 
 /* SECTION */
-
 .balance {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 10rem;
 	width: 100%;
+	max-width: 54rem;
 	padding: 0 2.5rem 0 2rem;
 	border-radius: 1rem;
 	color: $very-pale-orange;
@@ -41,14 +42,14 @@ body {
 
 	.textarea {
 		&__heading {
-			font-size: 1.4rem;
+			font-size: clamp(1.4rem, 5vw, 1.7rem);
 			margin-bottom: 0.5rem;
 			opacity: 0.7;
 		}
 
 		&__total {
 			font-weight: 700;
-			font-size: 2rem;
+			font-size: clamp(2rem, 5vw, 3rem);
 		}
 	}
 
@@ -58,19 +59,21 @@ body {
 }
 
 .data {
+	max-width: 54rem;
 	padding: 2rem;
 	margin-top: 2rem;
 	border-radius: 1rem;
 	background-color: $very-pale-orange;
 
 	.heading {
-		font-size: 2.4rem;
+		font-size: clamp(2.4rem, 5vw, 3rem);
 		color: $dark-brown;
 	}
 
 	.chart {
 		display: flex;
 		justify-content: space-between;
+		gap: 1.3rem;
 		text-align: center;
 		border-bottom: 2px solid $cream;
 
@@ -91,7 +94,7 @@ body {
 
 				.popup {
 					visibility: hidden;
-					font-size: 1.2rem;
+					font-size: clamp(1.2rem, 2vw, 1.7rem);
 					font-weight: 700;
 					position: absolute;
 					top: -3rem;
@@ -106,7 +109,7 @@ body {
 			}
 
 			&--day {
-				font-size: 1rem;
+				font-size: clamp(1rem, 5vw, 1.5rem);
 				padding-bottom: 2.5rem;
 				margin-top: 1.2rem;
 				color: $medium-brown;
@@ -115,8 +118,18 @@ body {
 	}
 }
 
+.data {
+	.chart {
+		&__col {
+			.active {
+				background-color: $cyan;
+			}
+		}
+	}
+}
+
 .text {
-	font-size: 1.4rem;
+	font-size: clamp(1.4rem, 5vw, 1.7rem);
 	margin: 3rem 0 0.5rem;
 	color: $medium-brown;
 }
@@ -127,7 +140,7 @@ body {
 	align-items: center;
 
 	&__total {
-		font-size: 2.9rem;
+		font-size: clamp(2.9rem, 5vw, 4.5rem);
 		font-weight: 700;
 		color: $dark-brown;
 	}
@@ -136,13 +149,13 @@ body {
 		text-align: right;
 
 		&--growth {
-			font-size: 1.4rem;
+			font-size: clamp(1.4rem, 5vw, 1.7rem);
 			font-weight: 700;
 			color: $dark-brown;
 		}
 
 		&--text {
-			font-size: 1.4rem;
+			font-size: clamp(1.4rem, 5vw, 1.7rem);
 			color: $medium-brown;
 		}
 	}
@@ -171,5 +184,24 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 500px) {
+@media (min-width: 576px) {
+	.balance {
+		height: 12.5rem;
+		padding: 0 3.8rem 0 3.3rem;
+	}
+
+	.data {
+		padding: 4rem 4rem 3rem;
+		.chart {
+			&__col {
+				&--data {
+					min-width: 5rem;
+
+					.popup {
+						top: -3.5rem;
+					}
+				}
+			}
+		}
+	}
 }

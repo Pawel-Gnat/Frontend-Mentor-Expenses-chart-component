@@ -23,45 +23,24 @@ async function displayChart() {
 
 	switch (new Date().getDay()) {
 		case 0:
-			daysColumns.forEach(col => {
-				col.classList.remove('active')
-			})
 			daysColumns[6].classList.add('active')
 			break
 		case 1:
-			daysColumns.forEach(col => {
-				col.classList.remove('active')
-			})
 			daysColumns[0].classList.add('active')
 			break
 		case 2:
-			daysColumns.forEach(col => {
-				col.classList.remove('active')
-			})
 			daysColumns[1].classList.add('active')
 			break
 		case 3:
-			daysColumns.forEach(col => {
-				col.classList.remove('active')
-			})
 			daysColumns[2].classList.add('active')
 			break
 		case 4:
-			daysColumns.forEach(col => {
-				col.classList.remove('active')
-			})
 			daysColumns[3].classList.add('active')
 			break
 		case 5:
-			daysColumns.forEach(col => {
-				col.classList.remove('active')
-			})
 			daysColumns[4].classList.add('active')
 			break
 		case 6:
-			daysColumns.forEach(col => {
-				col.classList.remove('active')
-			})
 			daysColumns[5].classList.add('active')
 			break
 	}
